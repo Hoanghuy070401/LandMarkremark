@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Landmark Remark Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="google_maps_key" templateMergeStrategy="preserve">AIzaSyDPnqAHcAIwwUWhghK4XW4ltb9aSuA2Jls</string>
+    <string name="default_web_client_id">639755083549-vckbk92ggg3a9onlklur5th1n1nubgeu.apps.googleusercontent.com</string>
+    <string name="map">Bản đồ</string>
+    <string name="list_notes">Đã lưu</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="email">Email</string>
+    <string name="password">Mật khẩu</string>
+    <string name="password_again">Nhập lại mật khẩu</string>
+    <string name="enter_password">Nhập mật khẩu</string>
+    <string name="enter_note">Nhập ghi chú</string>
+    <string name="back_sign">Trở về đăng nhập</string>
+    <string name="sign">Đăng nhập</string>
+    <string name="sign_fail">Đăng nhập thất bại</string>
+    <string name="sign_up_fail">Đăng ký thất bại</string>
+    <string name="enter_email">Nhập Email</string>
+    <string name="sign_google">Đăng nhập với Google</string>
+    <string name="fail_sign">Đăng nhập thất baị , vui lòng thử lại sau</string>
+    <string name="fail_sign_up">Đăng ký thất bại , vui lòng thử lại sau</string>
+    <string name="fail_add_note">Thêm ghi chú thất bại, vui lòng thử lại sau</string>
+    <string name="fail_up_load_profile">Tạo hồ sơ thất bại , vui lòng thử lại</string>
+    <string name="sign_up_new_account">Đăng ký tài khoản mới</string>
+    <string name="information_account">Thông tin tài khoản</string>
+    <string name="sign_up">Đăng ký</string>
+    <string name="sign_out">Đăng xuất</string>
+    <string name="sign_success">Đăng nhập thành công</string>
+    <string name="sign_up_success">Đăng ký thành công</string>
+    <string name="add_note_success">Thêm ghi chú thành công</string>
+    <string name="name">Tên người dùng</string>
+    <string name="name_account">Tên tài khoản</string>
+    <string name="enter_name">Nhập tên người dùng</string>
+    <string name="well_come_to_my_app">Chào mừng bạn đến với ứng dụng</string>
+    <string name="fails">Lỗi</string>
+    <string name="fails_upload_image">Tải ảnh thất bại</string>
+    <string name="success_upload_image">Tải ảnh thành công</string>
+    <string name="success">Thành công</string>
+    <string name="please_check_you_email_and_password">Vui lòng kiểm tra lại email hoặc mật khẩu của bạn!!</string>
+    <string name="enter_full_data">Vui lòng điền đầy đủ thông tin</string>
+    <string name="insufficient_data">Thiếu dữ liệu</string>
+    <string name="please_enter_email">Vui lòng nhập email</string>
+    <string name="please_not_empty">Vui lòng không để trống trường này</string>
+    <string name="please_not_empty_notes">Vui lòng không để trống ghi chú</string>
+    <string name="please_choose_avatar">Vui lòng chọn ảnh đại diện</string>
+    <string name="please_enter_name">Vui lòng nhập tên</string>
+    <string name="password_not_like">Mật khẩu nhập chưa trùng khớp</string>
+    <string name="add_new_notes">Ghi chú</string>
+    <string name="detail_note">Chi tiết ghi chú</string>
+    <string name="name_notes">Người ghi chú : </string>
+    <string name="notes">Nội dung ghi chú : </string>
+    <string name="address">"Địa điểm ghi chú : "</string>
+    <string name="not_get_address">Không thể lấy được địa chỉ cụ thể</string>
+    <string name="not_result">Không có kết quả phù hợp </string>
+    <string name="cancel">Hủy</string>
+    <string name="save">Lưu</string>
+
+</resources>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <RelativeLayout
+       android:id="@+id/rlCenter"
+       android:layout_above="@+id/llInformationNotes"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <fragment
+           android:id="@+id/map"
+           android:name="com.google.android.gms.maps.SupportMapFragment"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           tools:context=".ui.activity.MapsActivity" />
+       <LinearLayout
+           android:id="@+id/llSearch"
+           android:orientation="vertical"
+           android:layout_marginHorizontal="16dp"
+           android:layout_marginTop="8dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center_vertical"
+               android:background="@drawable/bg_border_8dp_stroke_1dp">
+               <androidx.appcompat.widget.SearchView
+                   android:id="@+id/edtSearch"
+                   android:layout_width="match_parent"
+                   android:layout_height="40dp"
+                   android:layout_weight="1"
+                   android:theme="@style/SearchView"
+                   app:closeIcon="@drawable/ic_cross"
+                   app:iconifiedByDefault="false"
+                   app:queryBackground="@android:color/transparent"
+                   app:queryHint="@string/search"
+                   app:searchIcon="@drawable/ic_search"
+                   />
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/crAvatar"
+                   android:src="@drawable/ic_user_default"
+                   android:layout_width="wrap_content"
+                   android:layout_weight="0.03"
+                   android:layout_marginHorizontal="4dp"
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/llListSearch"
+               android:gravity="center_horizontal"
+               android:orientation="vertical"
+               android:background="@drawable/bg_border_8dp_stroke_1dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:visibility="gone">
+               <app.example.landmarkremarkapplication.widget.MaxHeightRecyclerView
+                   android:id="@+id/rcvListResult"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvEmpty"
+                   android:text="@string/not_result"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:visibility="gone"/>
+           </LinearLayout>
+       </LinearLayout>
+       <RelativeLayout
+           android:paddingBottom="8dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:id="@+id/llMyLocation"
+               android:layout_width="45dp"
+               android:layout_height="45dp"
+               android:layout_alignParentEnd="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginEnd="8dp"
+               android:layout_marginBottom="8dp"
+               android:background="@drawable/bg_circle"
+               android:gravity="center"
+               android:padding="8dp">
+
+               <ImageView
+                   android:id="@+id/imvLocation"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/ic_location"
+                   map:tint="@color/blue_600" />
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/llAddNote"
+               android:layout_width="45dp"
+               android:layout_height="45dp"
+               android:layout_alignParentEnd="true"
+               android:layout_above="@+id/llMyLocation"
+               android:layout_marginEnd="8dp"
+               android:background="@drawable/bg_circle"
+               android:gravity="center"
+               android:padding="8dp">
+
+               <ImageView
+                   android:id="@+id/imvAdd"
+                   android:layout_width="20dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/ic_add"
+                   map:tint="@color/blue_600" />
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/llOnOffMarker"
+               android:layout_width="45dp"
+               android:layout_height="45dp"
+               android:layout_alignParentEnd="true"
+               android:layout_above="@+id/llAddNote"
+               android:layout_marginEnd="8dp"
+               android:layout_marginBottom="8dp"
+               android:background="@drawable/bg_circle"
+               android:gravity="center"
+               android:padding="8dp">
+
+               <ImageView
+                   android:id="@+id/imvMarker"
+                   android:layout_width="20dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/ic_location_unpined"
+                   map:tint="@color/blue_600" />
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:id="@+id/llChangeMap"
+               android:layout_width="45dp"
+               android:layout_height="45dp"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="8dp"
+               android:background="@drawable/bg_circle"
+               android:gravity="center"
+               android:padding="8dp">
+
+               <ImageView
+                   android:layout_width="20dp"
+                   android:layout_height="20dp"
+                   map:tint="@color/blue_600"
+                   android:src="@drawable/ic_layout_map" />
+           </LinearLayout>
+       </RelativeLayout>
+   </RelativeLayout>
+    <include
+        android:id="@+id/llInformationNotes"
+        layout="@layout/layout_details_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
+
