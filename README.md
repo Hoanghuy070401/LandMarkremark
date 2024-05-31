@@ -6,4 +6,14 @@
 
 # Hướng dẫn sử dụng app 
 
+Ứng dụng có 2 hình thức đăng nhập (đăng kí tài khoản , đăng nhập bằng google) giúp người dùng có thể đăng nhập thuận tiện 
 
+Màn hình chính có các nút hiển thị vị trí hiện tại , đổi style bản đồ , ẩn hiện vị trí các vị trí đã được lưu Ghi chú của tất cả tài khoản , và nút thêm ghi chú vào vị trí hiện tại 
+
+Đối với thêm ghi chú tại vị trí bất kỳ chúng ta có thể nhấn giữ tại vị trí cần thêm ghi chú và dialog sẽ hiện ô nhập ghi chú cho chúng ta có thể nhập và lưu lại để thêm ghi chú mới 
+
+Đối với các ghim đã xuất hiện trên màn hình chúng ta có thể nhấn vào và xem chi tiết ghi chú đó 
+
+Thanh tìm kiếm sẽ tìm kiếm tên người dùng , nội dung notes và địa chỉ có liên quan đến từ khóa 
+
+Ảnh giao diện cho phép người dùng xem chi tiết thông tin tài khoản và đăng xuất để đăng nhập tài khoản mới 
