@@ -14,8 +14,10 @@ import android.os.Bundle
 import android.provider.Settings
 import android.view.View
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.widget.SearchView
+import androidx.core.os.HandlerCompat.postDelayed
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.example.landmarkremarkapplication.R
@@ -55,6 +57,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import java.util.Locale
 import kotlin.collections.ArrayList
+import kotlin.system.exitProcess
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ListAdapter.OnclickItem {
 
@@ -74,6 +77,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ListAdapter.Onclic
     private var listResult = ArrayList<NotesModel>()
     private var isShowPined = false
     var ignoreTextChange = false
+    private var twice = false
     val listMarkers = mutableListOf<Marker>()
 
 
@@ -97,6 +101,24 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ListAdapter.Onclic
         requestLocationPermissions()
         setAdapter()
         getNotes()
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (twice) {
+                    exitProcess(0)
+                }
+                twice = true
+                AppConstants.setToast(
+                    this@MapsActivity,
+                    getString(R.string.insufficient_data),
+                    getString(R.string.please_not_empty_notes),
+                    6
+                )
+                AppConstants.postDelayed(2000){
+                    twice = false
+                }
+            }
+        }
+        onBackPressedDispatcher.addCallback(this, callback)
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
